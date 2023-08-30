@@ -44,7 +44,6 @@ router.delete("/:idCountry/:id", async (req, res) => {
                 where: { id }
             }
         })
-    // console.log(country.activities[0].activityCountry)
     await country.activities[0].activityCountry.destroy();
     return res.status(200).send(`Se borro la actividad$ {name}`)
 })
