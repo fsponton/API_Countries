@@ -6,7 +6,6 @@ const { getCountriesApi, upper } = require('./controllers/controllers');
 const { Country, Activity } = require('../db');
 
 
-//first get and get by name for query
 router.get('/', async (req, res) => {
     const data = await Country.findAll({ order: [['name', 'ASC']], include: Activity });
     const { name } = req.query;
